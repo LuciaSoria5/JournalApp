@@ -2,20 +2,19 @@ import { useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link as RouerLink} from 'react-router-dom';
 
-import { Button, Grid, Link, TextField, Typography } from '@mui/material';
+import { Alert, Button, Grid, Link, TextField, Typography } from '@mui/material';
 import { Google } from '@mui/icons-material';
 
 import { AuthLayout } from '../layout/AuthLayout';
 import { useForm } from '../../hooks/useForm';
-import { checkingAuthentication, startGoogleSignIn } from '../../store/auth';
+import { startGoogleSignIn, startLoignWithEmailPassword } from '../../store/auth';
 
 export const LoginPage = () => {
 
-  const { status } = useSelector( state => state.auth );
-
+  const { status, errorMessage } = useSelector( state => state.auth );
   const dispath = useDispatch();
 
-  const { email, password, onInputChange } = useForm({
+  const { formState, email, password, onInputChange } = useForm({
     email: 'luci@google.com',
     password: '123456'
   });
@@ -23,14 +22,12 @@ export const LoginPage = () => {
   const isAuthenticating = useMemo( () => status === 'checking', [status] );
 
   const onSubmit = (event) => {
-    event.preventDefault();
-    dispath( checkingAuthentication(email, password));    
-    // console.log({ email, password })
+    event.preventDefault();   
+    dispath( startLoignWithEmailPassword( {email, password} ) );
   };
 
   const onGoogleSigIn = () => {
     dispath( startGoogleSignIn() );
-    // console.log( "on Google" )
   };
 
   return (
@@ -67,8 +64,21 @@ export const LoginPage = () => {
               />
           </Grid>
 
+          <Grid
+            container
+            sx={ {mt: 2} }
+            display={ !!errorMessage ? '' : 'none' }
+          > 
+            <Grid item xs={ 12 }>
+                  <Alert severity='error'>{ errorMessage }</Alert>
+            </Grid>
+          </Grid>
 
-          <Grid container spacing={ 2 } sx={{ mb: 2, mt: 2}}>
+          <Grid 
+            container 
+            spacing={ 2 } 
+            sx={{ mb: 2, mt: 1}}
+          >
 
             <Grid item xs={ 12 } sm={ 6 }>
               <Button 
