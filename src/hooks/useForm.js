@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 /* Parametros:
  { campo: inicializacion }
@@ -13,6 +13,15 @@ export const useForm = ( initialForm = {}, formValidations = {} ) => {
     useEffect(() => {
       createValidators();
     }, [ formState ])
+
+
+    const isFormValid = useMemo(() => {
+        for (const formValue of Object.keys( formValidation )) {
+            if (formValidation[formValue] !== null ) return false;
+        }
+        return true;
+
+    }, [ formValidation ])
     
 
     const onInputChange = ({ target }) => {
@@ -42,9 +51,11 @@ export const useForm = ( initialForm = {}, formValidations = {} ) => {
 
     return {
         ...formState,
-        ...formValidation,
         formState,
         onInputChange,
         onResetForm,
+
+        ...formValidation,
+        isFormValid
     }
 }
