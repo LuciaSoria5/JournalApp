@@ -26,12 +26,12 @@ export const LoginPage = () => {
     event.preventDefault();
     dispath( checkingAuthentication(email, password));    
     // console.log({ email, password })
-  }
+  };
 
   const onGoogleSigIn = () => {
     dispath( startGoogleSignIn() );
     // console.log( "on Google" )
-  }
+  };
 
   return (
     // Grid es como un <div> pero con propiedades de Material
