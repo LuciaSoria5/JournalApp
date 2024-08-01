@@ -40,7 +40,7 @@ export const RegisterPage = () => {
   return (
     // Grid es como un <div> pero con propiedades de Material
     <AuthLayout title="Crear cuenta">
-      <h1>FormValid: { isFormValid ? 'Valido' : 'Incorrecto' }</h1>
+      {/* <h1>FormValid: { isFormValid ? 'Valido' : 'Incorrecto' }</h1> */}
 
       <form onSubmit={ onSubmit }>
 
