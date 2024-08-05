@@ -12,14 +12,14 @@ import { startGoogleSignIn, startLoignWithEmailPassword } from '../../store/auth
 const formData = {
                   email: '',
                   password: ''
-                };
+                }
 
 export const LoginPage = () => {
 
   const { status, errorMessage } = useSelector( state => state.auth );
   const dispath = useDispatch();
 
-  const { formState, email, password, onInputChange } = useForm( formData);
+  const { email, password, onInputChange } = useForm( formData);
 
   const isAuthenticating = useMemo( () => status === 'checking', [status] );
 
