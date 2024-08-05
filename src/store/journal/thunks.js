@@ -2,6 +2,7 @@ import { collection, doc, setDoc } from 'firebase/firestore/lite';
 import { FirebaseDB } from '../../firebase/config';
 import { addNewEmptyNote, savingNewNote, setActiveNote, setNotes, setSaving, updateNote } from './';
 import { loadNotes } from '../../helpers/loadNotes';
+import { fileUpload } from '../../helpers/fileUpload';
 
 export const startNewNode = () => {
     return async( dispatch, getState ) => {
@@ -55,5 +56,15 @@ export const startSaveNote = () => {
         await setDoc( docRef, noteToFireStore, { merge: true }); // merge para mantener los cambios que antes que estaban y ahora no mandamos
 
         dispatch( updateNote( note ) );
+    }
+}
+
+export const startUploadingFiles = ( files = [] ) => {
+    return async( dispatch, getState ) => {
+        
+        dispatch( setSaving() );
+        
+        await fileUpload( files[0] );
+        
     }
 }
