@@ -9,7 +9,7 @@ export const SideBarItem = ({ title, body, id, date, imageUrls = [] }) => {
     const dispatch = useDispatch();
 
     const onClickNote = () => {
-        console.log({ title, body, id, date, imageUrls });
+        // console.log({ title, body, id, date, imageUrls });
         dispatch( setActiveNote({ title, body, id, date, imageUrls }) );
     }
 
