@@ -30,7 +30,7 @@ Para ejecutar esta aplicación en tu máquina local, necesitas tener instalado l
 ## Instalación
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/LuciaSoria5/HeroesSpa.git
+   https://github.com/LuciaSoria5/JournalApp.git
    ```
 2. Navega al directorio del proyecto e instala las dependencias:
    ```bash
