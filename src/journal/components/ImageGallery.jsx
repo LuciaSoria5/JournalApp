@@ -2,6 +2,7 @@ import { ImageList, ImageListItem } from '@mui/material';
 
 
 export const ImageGallery = ({ images }) => {
+  if ( !images ) return; 
   return (
     <ImageList sx={{ width: '100%', height: 300 }} cols={ 4 } rowHeight={ 200 }>
       { images.map((image) => (

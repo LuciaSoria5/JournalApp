@@ -76,13 +76,15 @@ export const NoteView = () => {
                 style={{ display: 'none' }}
             />
 
-            <IconButton
+            <Button
                 color="primary"
                 disabled={ isSaving }
                 onClick={ () => fileInputRef.current.click() }
+                sx={{ padding: 2 }} 
             >
-                <UploadFileOutlined />
-            </IconButton>
+                <UploadFileOutlined sx={{ fontSize: 30, mr: 1}} />
+                AÑADIR IMAGEN
+            </Button>
 
             <Button 
                 disabled={ isSaving }
