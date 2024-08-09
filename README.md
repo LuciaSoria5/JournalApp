@@ -8,9 +8,9 @@ Esta es una aplicación desarrollada en React 18.3.1 que permite a los usuarios 
 
 La aplicación fue desplegada utilizando GitHub-Pages, y se encuentra disponible en [este link](https://luciasoria5.github.io/JournalApp/).
 
-Usuario registrado de prueba:
+Usuario registrado de ejemplo:
 - Correo: admin@ejemplo.com
-- Contrasñea: 123456
+- Contraseña: 123456
 
 ## Características y herramientas
 
