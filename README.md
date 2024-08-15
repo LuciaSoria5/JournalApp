@@ -41,5 +41,3 @@ Para ejecutar esta aplicación en tu máquina local, necesitas tener instalado l
     ```bash
    npm run dev
     ```
-
-<!-- AGREGAR: Redux, MUI, Firebase, Cloudify o como sea -->
