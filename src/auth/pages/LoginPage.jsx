@@ -35,7 +35,6 @@ export const LoginPage = () => {
   return (
     // Grid es como un <div> pero con propiedades de Material
     <AuthLayout title="Login">
-
       <form 
         onSubmit={ onSubmit }
         className="animate__animated animate__fadeIn animate__faster"

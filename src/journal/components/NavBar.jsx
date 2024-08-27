@@ -20,14 +20,6 @@ export const NavBar = ({ drawerWidth = 240 }) => {
         }}
     >
         <Toolbar>
-            <IconButton
-              color="inherit"
-              edge="start"
-              sx={{ mr: 2, display: { sm: 'none' } }}
-            >
-                <MenuBookOutlined />
-            </IconButton>
-
             <Grid 
               container 
               direction="row" 
@@ -39,7 +31,7 @@ export const NavBar = ({ drawerWidth = 240 }) => {
                 noWrap 
                 component="div"
               >
-                JournalApp
+                Agenda App
               </Typography>
 
               <IconButton 

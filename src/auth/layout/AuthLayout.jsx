@@ -1,4 +1,5 @@
-import { Grid, Typography } from "@mui/material"
+import { Grid, Icon, Typography } from "@mui/material"
+import StarIcon from '@mui/icons-material/Star';
 
 export const AuthLayout = ({ children, title = '' }) => {
   return (
@@ -10,6 +11,29 @@ export const AuthLayout = ({ children, title = '' }) => {
       justifyContent="center"
       sx={{ minHeight: '100vh', backgroundColor: 'primary.main', padding: 4}}
     >
+      <Typography 
+        variant="h1"
+        sx={{
+          textAlign:"center",
+          color:"#fff",
+          bgcolor:"primary.main",
+          mb:10
+        }}
+      >
+        Agenda App
+        <StarIcon sx={{ fontSize: 100, color: "white"}}/>
+      </Typography>
+
+      <Typography 
+        variant="h2"
+        sx={{
+          textAlign:"center",
+          color:"#fff",
+          bgcolor:"primary.main"
+        }}
+      >
+        {title==="Login" ? "¡Bienvenido!" :  "¡Es un gusto conocerte!" }
+      </Typography>
         <Grid item
           className="box-shadow"
           xs={ 3 }
