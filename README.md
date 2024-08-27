@@ -4,13 +4,13 @@
 ![Estado inicial de aplicación](/public/view.png)
 
 
-Esta es una aplicación desarrollada en React 18.3.1 que permite a los usuarios registrarse y en el sitio y crear notas con un título, descripción e imágenes.
+Esta es una aplicación desarrollada en React 18.3.1 que permite a los usuarios registrarse en el sitio y crear notas con un título, descripción e imágenes.
 
 La aplicación fue desplegada utilizando GitHub-Pages, y se encuentra disponible en [este link](https://luciasoria5.github.io/JournalApp/).
 
-Usuario registrado de prueba:
+Usuario registrado de ejemplo:
 - Correo: admin@ejemplo.com
-- Contrasñea: 123456
+- Contraseña: 123456
 
 ## Características y herramientas
 
@@ -30,7 +30,7 @@ Para ejecutar esta aplicación en tu máquina local, necesitas tener instalado l
 ## Instalación
 1. Clona el repositorio:
    ```bash
-   https://github.com/LuciaSoria5/JournalApp.git
+   git clone https://github.com/LuciaSoria5/JournalApp.git
    ```
 2. Navega al directorio del proyecto e instala las dependencias:
    ```bash
@@ -41,5 +41,3 @@ Para ejecutar esta aplicación en tu máquina local, necesitas tener instalado l
     ```bash
    npm run dev
     ```
-
-<!-- AGREGAR: Redux, MUI, Firebase, Cloudify o como sea -->
