@@ -7,23 +7,27 @@ export const AuthLayout = ({ children, title = '' }) => {
       spacing={ 0 }
       direction="column"
       alignItems="center"
-      justifyContent="center"
-      sx={{ minHeight: '100vh', backgroundColor: 'primary.main', padding: 4}}
+      justifyContent="top"
+      height="100vh"
+      width="100vw"
+      bgcolor="primary.main"
+      sx={{ minWidth: '360px', minHeight: '100vh', backgroundColor: 'primary.main', padding: 4}}
     >
       <Typography 
-        variant="h1"
+        variant="h3"
         sx={{
           textAlign:"center",
           color:"#fff",
           bgcolor:"primary.main",
-          mb:10
+          // mt:15,
+          mb:2,
         }}
       >
         AgendApp
       </Typography>
 
       <Typography 
-        variant="h2"
+        variant="h5"
         sx={{
           textAlign:"center",
           color:"#fff",
@@ -34,7 +38,8 @@ export const AuthLayout = ({ children, title = '' }) => {
       </Typography>
         <Grid item
           className="box-shadow"
-          xs={ 3 }
+          xs={3} 
+          // sm={6}
           sx={{
             width: { sm: 450 },
             backgroundColor: 'white', 
