@@ -1,4 +1,4 @@
-# Journal App
+# AgendApp
 
 ![Estado inicial de aplicación](/public/nothingToView.png)
 ![Estado inicial de aplicación](/public/view.png)
