@@ -1,5 +1,4 @@
 import { Grid, Icon, Typography } from "@mui/material"
-import StarIcon from '@mui/icons-material/Star';
 
 export const AuthLayout = ({ children, title = '' }) => {
   return (
@@ -20,8 +19,7 @@ export const AuthLayout = ({ children, title = '' }) => {
           mb:10
         }}
       >
-        Agenda App
-        <StarIcon sx={{ fontSize: 100, color: "white"}}/>
+        AgendApp
       </Typography>
 
       <Typography 

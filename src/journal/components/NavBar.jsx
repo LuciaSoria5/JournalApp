@@ -31,7 +31,7 @@ export const NavBar = ({ drawerWidth = 240 }) => {
                 noWrap 
                 component="div"
               >
-                Agenda App
+                AgendApp
               </Typography>
 
               <IconButton 
