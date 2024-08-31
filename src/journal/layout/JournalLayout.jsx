@@ -17,7 +17,7 @@ export const JournalLayout = ({ children }) => {
 
   useEffect(() => {
       setDrawer( (open) ? drawerWidth : 0);
-      console.log(drawer)
+      // console.log(drawer)
   }, [open])
 
   return (
@@ -31,7 +31,7 @@ export const JournalLayout = ({ children }) => {
             sx={{
               position: 'absolute',
               top: "0.2%",
-              left: 150,
+              left: 175,
               zIndex: 1300,
               
               // bottom: "75%"
